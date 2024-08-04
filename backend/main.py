@@ -1,6 +1,9 @@
 import json
 import os
 import subprocess
+from dotenv import load_dotenv
+load_dotenv()
+print(os.environ.get("OPENAI_API_KEY"))
 
 import firebase_admin
 from fastapi import FastAPI
