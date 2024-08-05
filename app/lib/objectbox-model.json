@@ -1,0 +1,420 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:4549363206469854959",
+      "lastPropertyId": "4:1054795996476728105",
+      "name": "ActionItem",
+      "properties": [
+        {
+          "id": "1:3642715305983391491",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:496997031196247447",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "3:240008057922675912",
+          "name": "completed",
+          "type": 1
+        },
+        {
+          "id": "4:1054795996476728105",
+          "name": "structuredId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:6744050843295718327",
+          "relationTarget": "Structured"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:6659106975582284693",
+      "lastPropertyId": "7:6416375948722872609",
+      "name": "Event",
+      "properties": [
+        {
+          "id": "1:4895038606390150708",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:18539561875087440",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "3:3630682721111482838",
+          "name": "startsAt",
+          "type": 10
+        },
+        {
+          "id": "4:5236374726380788989",
+          "name": "duration",
+          "type": 6
+        },
+        {
+          "id": "5:1317441607858781312",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "6:2475207521078596582",
+          "name": "created",
+          "type": 1
+        },
+        {
+          "id": "7:6416375948722872609",
+          "name": "structuredId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:3953816893990701175",
+          "relationTarget": "Structured"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:6710799719485335984",
+      "lastPropertyId": "9:5897691997906391051",
+      "name": "Geolocation",
+      "properties": [
+        {
+          "id": "1:452570256139451100",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1814588272962732029",
+          "name": "latitude",
+          "type": 8
+        },
+        {
+          "id": "3:6002423603747982445",
+          "name": "longitude",
+          "type": 8
+        },
+        {
+          "id": "4:5578366414694777287",
+          "name": "altitude",
+          "type": 8
+        },
+        {
+          "id": "5:1006054652518079333",
+          "name": "accuracy",
+          "type": 8
+        },
+        {
+          "id": "6:5737279794263694799",
+          "name": "time",
+          "type": 10
+        },
+        {
+          "id": "7:4543866836315264613",
+          "name": "googlePlaceId",
+          "type": 9
+        },
+        {
+          "id": "8:7683723169904921697",
+          "name": "address",
+          "type": 9
+        },
+        {
+          "id": "9:5897691997906391051",
+          "name": "locationType",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:3579022682011332590",
+      "lastPropertyId": "9:8484073394702029291",
+      "name": "Memory",
+      "properties": [
+        {
+          "id": "1:7702962984417825606",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2573571548247428967",
+          "name": "createdAt",
+          "type": 10,
+          "flags": 8,
+          "indexId": "3:3530786650507578459"
+        },
+        {
+          "id": "3:1120690310845259986",
+          "name": "startedAt",
+          "type": 10
+        },
+        {
+          "id": "4:3398190970660911368",
+          "name": "finishedAt",
+          "type": 10
+        },
+        {
+          "id": "5:6417783073224771240",
+          "name": "transcript",
+          "type": 9
+        },
+        {
+          "id": "6:9147411322678056177",
+          "name": "recordingFilePath",
+          "type": 9
+        },
+        {
+          "id": "7:8286090878355788415",
+          "name": "structuredId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "4:2649287339546453194",
+          "relationTarget": "Structured"
+        },
+        {
+          "id": "8:4918712092592954719",
+          "name": "discarded",
+          "type": 1,
+          "flags": 8,
+          "indexId": "5:394301461869558236"
+        },
+        {
+          "id": "9:8484073394702029291",
+          "name": "geolocationId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "6:2507565031693358573",
+          "relationTarget": "Geolocation"
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:5710878654767554122",
+          "name": "transcriptSegments",
+          "targetId": "9:8031499803285603584"
+        },
+        {
+          "id": "2:6767464287434342903",
+          "name": "photos",
+          "targetId": "5:5388529388891483294"
+        }
+      ]
+    },
+    {
+      "id": "5:5388529388891483294",
+      "lastPropertyId": "4:3393816155077452356",
+      "name": "MemoryPhoto",
+      "properties": [
+        {
+          "id": "1:2249783179781574879",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4927861106529159602",
+          "name": "base64",
+          "type": 9
+        },
+        {
+          "id": "3:5293564181589578072",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "4:3393816155077452356",
+          "name": "memoryId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "7:7330635254865239026",
+          "relationTarget": "Memory"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:3353956999059870657",
+      "lastPropertyId": "7:3557782199883275963",
+      "name": "Message",
+      "properties": [
+        {
+          "id": "1:3615256709892852779",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7670238030286798474",
+          "name": "createdAt",
+          "type": 10,
+          "flags": 8,
+          "indexId": "8:6206394058058559230"
+        },
+        {
+          "id": "3:1280262138162012685",
+          "name": "text",
+          "type": 9
+        },
+        {
+          "id": "4:2706795024579995534",
+          "name": "sender",
+          "type": 9
+        },
+        {
+          "id": "5:6685777496144564672",
+          "name": "pluginId",
+          "type": 9
+        },
+        {
+          "id": "6:7476234747629306630",
+          "name": "fromIntegration",
+          "type": 1
+        },
+        {
+          "id": "7:3557782199883275963",
+          "name": "type",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "3:1217993201599578064",
+          "name": "memories",
+          "targetId": "4:3579022682011332590"
+        }
+      ]
+    },
+    {
+      "id": "7:3178175524762956252",
+      "lastPropertyId": "4:6609328826168693517",
+      "name": "PluginResponse",
+      "properties": [
+        {
+          "id": "1:6818114558525594143",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:673582637728632479",
+          "name": "pluginId",
+          "type": 9
+        },
+        {
+          "id": "3:1741466830878175195",
+          "name": "content",
+          "type": 9
+        },
+        {
+          "id": "4:6609328826168693517",
+          "name": "memoryId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "9:1430867819026331832",
+          "relationTarget": "Memory"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "8:5330234711492459668",
+      "lastPropertyId": "5:5863654936004077030",
+      "name": "Structured",
+      "properties": [
+        {
+          "id": "1:4910702870193733939",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1070789489206603410",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "3:3575456331847871002",
+          "name": "overview",
+          "type": 9
+        },
+        {
+          "id": "4:1323584283545689502",
+          "name": "emoji",
+          "type": 9
+        },
+        {
+          "id": "5:5863654936004077030",
+          "name": "category",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "9:8031499803285603584",
+      "lastPropertyId": "7:1713070229734292538",
+      "name": "TranscriptSegment",
+      "properties": [
+        {
+          "id": "1:1295717601402516204",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2082864293683990096",
+          "name": "text",
+          "type": 9
+        },
+        {
+          "id": "3:20382941030216807",
+          "name": "speaker",
+          "type": 9
+        },
+        {
+          "id": "4:8432335337463097011",
+          "name": "speakerId",
+          "type": 6
+        },
+        {
+          "id": "5:4576696271209128604",
+          "name": "isUser",
+          "type": 1
+        },
+        {
+          "id": "6:1072554099665198133",
+          "name": "start",
+          "type": 8
+        },
+        {
+          "id": "7:1713070229734292538",
+          "name": "end",
+          "type": 8
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "9:8031499803285603584",
+  "lastIndexId": "9:1430867819026331832",
+  "lastRelationId": "3:1217993201599578064",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
