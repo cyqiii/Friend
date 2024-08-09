@@ -3,6 +3,18 @@ import os
 
 import firebase_admin
 from fastapi import FastAPI
+from dotenv import load_dotenv
+load_dotenv()
+print(os.environ.get("OPENAI_API_KEY"))
+# List of environment variables to unset due to the socks proxy
+variables_to_unset = [
+    'ALL_PROXY',
+    'all_proxy'
+]
+
+# Unset specific environment variables
+for var in variables_to_unset:
+    os.environ.pop(var, None)
 
 from modal import Image, App, asgi_app, Secret
 from routers import backups, chat, memories, plugins, speech_profile, transcribe, screenpipe
